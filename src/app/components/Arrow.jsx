@@ -30,11 +30,9 @@ export default function Arrow(props) {
           <mesh
             geometry={nodes.Object_4.geometry}
             material={materials["tex-global"]}
-            //   position={[0, -1, 0]
             ref={targetRef}
             rotation={[0, Math.PI / 10, 0]}
             scale={0.2}
-            position={[1, -2.5, -3.5]}
           />
         </group>
       </group>
