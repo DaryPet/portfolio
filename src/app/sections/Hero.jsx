@@ -10,10 +10,10 @@ import ReactLogo from "../components/ReactLogo.jsx";
 import Button from "../components/Button.jsx";
 import Target from "../components/Target.jsx";
 import Arrow from "../components/Arrow";
-import CanvasLoader from "../components/Loader.jsx";
-import HeroCamera from "../components/HeroCamera.jsx";
-import { calculateSizes } from "../constants/index.js";
-import { HackerRoom } from "../components/HackerRoom.jsx";
+import CanvasLoader from "../components/Loader";
+import HeroCamera from "../components/HeroCamera";
+import { calculateSizes } from "../constants/index";
+import { HackerRoom } from "../components/HackerRoom";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
