@@ -53,7 +53,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="col-span-1 xl:row-span-4">
+        {/* <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
@@ -77,7 +77,7 @@ export default function About() {
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
             <img
