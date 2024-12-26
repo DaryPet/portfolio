@@ -26,7 +26,8 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="md:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          <span className="waving-hand">👋</span> Welcome to my world
+          {/* <span className="waving-hand">👋</span> Welcome to my world */}
+          Welcome to my world
         </p>
         <p className="hero_tag text-gray_gradient">
           Building Products & Brands
@@ -49,10 +50,18 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
+              <Target
+                position={sizes.targetPosition}
+                renderOrder={9999}
+                depthTest={false}
+              />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Rings position={sizes.ringPosition} />
-              <Arrow position={sizes.arrowPosition} />
+              <Arrow
+                position={sizes.arrowPosition}
+                renderOrder={9999}
+                depthTest={false}
+              />
             </group>
 
             <ambientLight intensity={1} />
