@@ -1,9 +1,7 @@
 "use client";
 
-// import Globe from "react-globe.gl";
 import { useState } from "react";
 import Button from "../components/Button";
-// import Earth from "../components/Earth";
 
 import dynamic from "next/dynamic";
 
@@ -23,7 +21,7 @@ export default function About() {
     }, 2000);
   };
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="about">
       <h2 className="hero_tag text-gray_gradient">About Me</h2>
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
@@ -54,8 +52,11 @@ export default function About() {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I experinced with Html, CSS, JavaScript, React, Redux, Next.js,
-                Node, Nest, Python, Mongo DB, GraphQL, LLM
+                I experinced with{" "}
+                <span className="font-bold uppercase">
+                  Html, CSS, JavaScript, Three.js, React, Redux, Next.js, Node,
+                  Nest, Python, Mongo DB, GraphQL, LLM
+                </span>
               </p>
             </div>
           </div>

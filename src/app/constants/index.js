@@ -58,16 +58,74 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: "Podcastr - AI Podcast Platform",
-    desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
+    title: "Fortune Tax Solution",
+    desc: "The Smart Booking & Document Management System is a web application that allows users to easily manage documents, fill out tax reports, book meetings, and interact with a tax adviser.",
     subdesc:
-      "Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.",
-    href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
-    texture: "/textures/project/project1.mp4",
-    logo: "/assets/project-logo1.png",
+      "Built as a full-stack application this project is designed with an intuitive user interface, making it suitable for both registered and unregistered users.",
+    stack:
+      "TECH STACK: React, Redux, Axios, JavaScript, CSS, NestJs, GraphQL, Supabase, Vercel.",
+    href: "https://tax-consulting-app.vercel.app",
+    texture: "/textures/project/tax.mp4",
+    logo: "/assets/tax-1.png",
+    logoStyle: {
+      backgroundColor: "#aac2e7",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/react.svg",
+      },
+      {
+        id: 2,
+        name: "Redux",
+        path: "/assets/redux.svg",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+      {
+        id: 4,
+        name: "CSS",
+        path: "/assets/css.svg",
+      },
+      {
+        id: 5,
+        name: "Nest.js",
+        path: "assets/nest.svg",
+      },
+
+      {
+        id: 6,
+        name: "GraphQl",
+        path: "/assets/graphql.svg",
+      },
+
+      {
+        id: 7,
+        name: "Supabse",
+        path: "/assets/supabase.svg",
+      },
+    ],
+  },
+  {
+    title: "Guitar Lessons - Learnihg platform with personal teacher",
+    desc: "The Guitar Lessons App with Personal login, access to documents, notes, and chat with teacher is a web application that enables students to easily manage lessons, notes, chat with teacher in a real time, send homework, kinks wit video, etc.",
+    subdesc:
+      "Students can learn to play guitar with a personal teacher, gaining access to materials such as notes, tabs, videos, a teacher chat, and the option to book private lessons directly through their user panel.",
+    stack:
+      "TECH STACK: React, Redux, Axios, JavaScript, CSS, NestJs, GraphQL, Supabase, Websocket, Vercel.",
+    href: "https://guitar-lessons-px2t.vercel.app",
+    texture: "/textures/project/guitar.mp4",
+    logo: "/assets/guitar-1.png",
     logoStyle: {
       backgroundColor: "#2A1816",
-      border: "0.2px solid #36201D",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
       boxShadow: "0px 0px 60px 0px #AA3C304D",
     },
     spotlight: "/assets/spotlight1.png",
@@ -79,8 +137,8 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Redux",
+        path: "assets/redux.svg",
       },
       {
         id: 3,
@@ -89,60 +147,34 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "NestJs",
+        path: "/assets/nest.svg",
+      },
+      {
+        id: 5,
+        name: "Supabase",
+        path: "/assets/supabase.svg",
+      },
+      {
+        id: 6,
+        name: "Supabase",
+        path: "/assets/websocket.svg",
       },
     ],
   },
   {
-    title: "LiveDoc - Real-Time Google Docs Clone",
-    desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
+    title: " Travel Truck - App for renting campers",
+    desc: " TravelTrucks is a web application for renting campers. It allows users to browse available vehicles, filter them by various criteria, view detailed information, read and leave reviews, and book campers.",
     subdesc:
-      "With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.",
-    href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
-    texture: "/textures/project/project2.mp4",
-    logo: "/assets/project-logo2.png",
+      "Filtering vehicles by location, body type, and specific features (air conditioning, kitchen, etc.); Camper Details Page, Reviews, Booking Form  React, Redux, Axios, JS, CSS, Vite, Vercel",
+    stack: "TECH STACK: React, Redux, Axios, JavaScript, CSS, Vite, Vercel.",
+    href: "https://travel-trucks-app-tan.vercel.app",
+    texture: "/textures/project/campers.mp4",
+    logo: "/assets/camper-1.png",
     logoStyle: {
-      backgroundColor: "#13202F",
-      border: "0.2px solid #17293E",
-      boxShadow: "0px 0px 60px 0px #2F6DB54D",
-    },
-    spotlight: "/assets/spotlight2.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
-      },
-    ],
-  },
-  {
-    title: "CarePulse - Health Management System",
-    desc: "An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.",
-    subdesc:
-      "With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.",
-    href: "https://www.youtube.com/watch?v=lEflo_sc82g",
-    texture: "/textures/project/project3.mp4",
-    logo: "/assets/project-logo3.png",
-    logoStyle: {
-      backgroundColor: "#60f5a1",
-      background:
-        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      backgroundColor: "#976257",
+      // background:
+      //   "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
       border: "0.2px solid rgba(208, 213, 221, 1)",
       boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
     },
@@ -155,35 +187,42 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Redux",
+        path: "assets/redux.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "Axios",
+        path: "/assets/axios.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "Vite",
+        path: "/assets/vite.svg",
+      },
+      {
+        id: 5,
+        name: "CSS",
+        path: "/assets/css.svg",
       },
     ],
   },
   {
-    title: "Horizon - Online Banking Platform",
-    desc: "Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.",
+    title: "Aquatrack App",
+    desc: " Aquatrack is a personal hydration app with login, register, and log out features. ",
     subdesc:
-      "Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.",
-    href: "https://www.youtube.com/watch?v=PuOVqP_cjkE",
-    texture: "/textures/project/project4.mp4",
-    logo: "/assets/project-logo4.png",
+      "It calculates daily water needs based on user weight, height, and exercise habits, and tracks water intake through an integrated calendar to help users stay hydrated.",
+    stack:
+      "TECH STACK: React, Redux, Axios, CSS, Node.js, MongoDB, Mongoose, Vercel.",
+    href: "https://water-in.vercel.app",
+    texture: "/textures/project/water.mp4",
+    logo: "/assets/waterin.svg",
     logoStyle: {
       backgroundColor: "#0E1F38",
-      border: "0.2px solid #0E2D58",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
       boxShadow: "0px 0px 60px 0px #2F67B64D",
     },
-    spotlight: "/assets/spotlight4.png",
+    spotlight: "/assets/spotlight3.png",
     tags: [
       {
         id: 1,
@@ -192,32 +231,43 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Redux",
+        path: "assets/redux.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "Axios",
+        path: "/assets/axios.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "NodeJS",
+        path: "/assets/node-1.svg",
+      },
+      {
+        id: 5,
+        name: "MongoDB",
+        path: "/assets/mongodb.svg",
+      },
+      {
+        id: 6,
+        name: "Mongoose",
+        path: "/assets/mongoose.png",
       },
     ],
   },
   {
-    title: "Imaginify - AI Photo Manipulation App",
-    desc: "Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.",
+    title: "Weather App",
+    desc: " A weather application that provides users with current weather information and a 6-day forecast.",
     subdesc:
-      "Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-    href: "https://www.youtube.com/watch?v=Ahwoks_dawU",
-    texture: "/textures/project/project5.mp4",
-    logo: "/assets/project-logo5.png",
+      "The app features live updates and is designed for an intuitive user experience.",
+    stack: "TECH STACK: React, Redux, Axios, CSS, Netlify.",
+    href: "https://weatherapp-009.netlify.app",
+    texture: "/textures/project/weather.mp4",
+    logo: "/assets/weather-1.png",
     logoStyle: {
       backgroundColor: "#1C1A43",
-      border: "0.2px solid #252262",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
       boxShadow: "0px 0px 60px 0px #635BFF4D",
     },
     spotlight: "/assets/spotlight5.png",
@@ -229,18 +279,61 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Redux",
+        path: "assets/redux.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "Axios",
+        path: "/assets/axios.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "CSS",
+        path: "/assets/css.svg",
+      },
+      {
+        id: 5,
+        name: "Netlify",
+        path: "/assets/netlify.svg",
+      },
+    ],
+  },
+  {
+    title: "EnglishExcellence - English School App",
+    desc: "English Excellence is a comprehensive platform for learning English, offering a variety of study packages, personalized teacher selection, and convenient consultations. It features a responsive, adaptive design for all devices and screen sizes, ensuring a user-friendly experience.",
+    // subdesc:
+    //   "The app features live updates and is designed for an intuitive user experience.",
+    stack: "TECH STACK: HTML, CSS, JavaScript, Figma, Vite",
+    href: "https://kgrebets.github.io/goit-markup-english-school/",
+    texture: "/textures/project/english.mp4",
+    logo: "/assets/english.svg",
+    logoStyle: {
+      backgroundColor: "#0E1F38",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px #635BFF4D",
+    },
+    spotlight: "/assets/spotlight3.png",
+    tags: [
+      {
+        id: 1,
+        name: "HTML",
+        path: "/assets/html.svg",
+      },
+      {
+        id: 2,
+        name: "CSS",
+        path: "assets/css.svg",
+      },
+      {
+        id: 3,
+        name: "JavaScript",
+        path: "/assets/js.svg",
+      },
+      {
+        id: 4,
+        name: "Vite",
+        path: "/assets/vite.svg",
       },
     ],
   },
