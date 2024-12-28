@@ -89,25 +89,25 @@ export const myProjects = [
         name: "TypeScript",
         path: "/assets/typescript.png",
       },
+      // {
+      //   id: 4,
+      //   name: "CSS",
+      //   path: "/assets/css.svg",
+      // },
       {
         id: 4,
-        name: "CSS",
-        path: "/assets/css.svg",
-      },
-      {
-        id: 5,
         name: "Nest.js",
         path: "assets/nest.svg",
       },
 
       {
-        id: 6,
+        id: 5,
         name: "GraphQl",
         path: "/assets/graphql.svg",
       },
 
       {
-        id: 7,
+        id: 6,
         name: "Supabse",
         path: "/assets/supabase.svg",
       },
@@ -172,13 +172,11 @@ export const myProjects = [
     texture: "/textures/project/campers.mp4",
     logo: "/assets/camper-1.png",
     logoStyle: {
-      backgroundColor: "#976257",
-      // background:
-      //   "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      backgroundColor: "#2A1816",
       border: "0.2px solid rgba(208, 213, 221, 1)",
       boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
     },
-    spotlight: "/assets/spotlight3.png",
+    spotlight: "/assets/spotlight1.png",
     tags: [
       {
         id: 1,

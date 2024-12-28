@@ -29,12 +29,10 @@ const Computer = (props) => {
   }, [txt]);
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={[0, 0.3, 0]}>
       <group name="Scene">
         <mesh
           name="monitor-screen"
-          // castShadow
-          // receiveShadow
           geometry={nodes["monitor-screen"].geometry}
           material={nodes["monitor-screen"].material}
           position={[0.127, 1.831, 0.511]}
@@ -1022,322 +1020,82 @@ useGLTF.preload("/models/computer.glb");
 
 export default Computer;
 
-// "use client"; // Обязательно для клиентских компонентов в Next.js
-// import { useRef, useEffect } from "react";
-// import { useGLTF, useAnimations, useVideoTexture } from "@react-three/drei";
+// ё
+// лдд
+// вапролд
+
+// "use client";
+
+// import React, { useRef, useEffect } from "react";
+// import { useGLTF, useVideoTexture, useAnimations } from "@react-three/drei";
 // import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
 
-// const Computer = (props) => {
+// export default function Computer(props) {
 //   const group = useRef();
-
-//   // Загружаем модель
-//   const { nodes, materials, animations } = useGLTF("models/acer_monitor-2.glb");
-//   // Если в модели действительно есть анимации:
+//   const { nodes, materials, animations } = useGLTF("/models/screen.glb");
 //   const { actions } = useAnimations(animations, group);
 
-//   // Создаём видеотекстуру
 //   const txt = useVideoTexture(
-//     props.texture ? props.texture : "/textures/project/project1.mp4",
-//     {
-//       loop: true,
-//       muted: true,
-//       start: true,
-//       autoplay: true,
-//       crossOrigin: "Anonymous",
-//     }
+//     props.texture ? props.texture : "/textures/project/tax.mp4"
 //   );
 
-//   // Опционально «переворачиваем» текстуру (чтобы не была задом наперёд)
 //   useEffect(() => {
 //     if (txt) {
 //       txt.flipY = false;
 //     }
-//   }, [txt]);
+//     if (materials.material) {
+//       materials.material.color.set("#D3D3D3"); // Устанавливаем цвет светло-серый
+//     }
+//   }, [txt, materials.material]);
 
-//   // Пример анимации GSAP (вращение модели при монтировании)
 //   useGSAP(() => {
-//     if (!group.current) return;
 //     gsap.from(group.current.rotation, {
-//       y: Math.PI,
+//       y: Math.PI / 2,
 //       duration: 1,
 //       ease: "power3.out",
 //     });
 //   }, [txt]);
-//   const DEFAULT_COLOR = "#D3D3D3";
+
 //   return (
 //     <group
 //       ref={group}
 //       {...props}
 //       dispose={null}
-//       scale={[2, 2, 2]}
-//       position={[0, 1, 0]}
+//       position={[0, 2, 0]}
+//       scale={[2.5, 2.5, 2.5]}
 //     >
-//       {/* Вместо materials.screen используем нашу видеотекстуру */}
+//       {/* Экран с видеотекстурой */}
 //       <mesh
 //         castShadow
 //         receiveShadow
-//         geometry={nodes.Object_5.geometry}
-//         position={[0, 0, 0]}
+//         geometry={nodes.Object_7.geometry}
+//         position={[0.014, 0.009, 0.272]}
+//         scale={[0.848, 0.475, 0.001]}
 //         rotation={[0, 0, 0]}
 //       >
 //         <meshBasicMaterial map={txt} toneMapped={false} />
 //       </mesh>
-
-//       <group position={[0, 0.564, -0.034]}>
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_7.geometry}
-//           material={materials["achter.onder.noise.001"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_8.geometry}
-//           material={materials["achter.ribbel.001"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_9.geometry}
-//           material={materials["logo.coutout.smooth.001"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_10.geometry}
-//           material={materials["achter.onder.vlak.001"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <group position={[0.042, -0.21, 0.001]} scale={[0.336, 0.308, 0.026]}>
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_16.geometry}
-//             material={materials["metaal."]}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <group
-//             position={[0.649, 0.013, 0.093]}
-//             rotation={[-Math.PI, Math.PI / 2, 0]}
-//             scale={[76.201, 6.512, 5.977]}
-//           >
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_18.geometry}
-//               material={materials["gold.plug"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_19.geometry}
-//               material={materials["plastic.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//           </group>
-//         </group>
-//         <group position={[-0.228, -0.21, 0.004]} scale={0.308}>
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_21.geometry}
-//             material={materials["metaal."]}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <group position={[0.205, 0.011, -0.001]} scale={0.008}>
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_25.geometry}
-//               material={materials["metal.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_26.geometry}
-//               material={materials["plastic.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//           </group>
-//           <group position={[0.007, 0.011, -0.001]} scale={0.008}>
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_28.geometry}
-//               material={materials["metal.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_29.geometry}
-//               material={materials["plastic.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//           </group>
-//           <group position={[-0.187, 0.011, -0.001]} scale={0.008}>
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_31.geometry}
-//               material={materials["metal.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//             <mesh
-//               castShadow
-//               receiveShadow
-//               geometry={nodes.Object_32.geometry}
-//               material={materials["plastic.hdmi"]}
-//               material-color={DEFAULT_COLOR}
-//             />
-//           </group>
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_23.geometry}
-//             material={materials["plastic.hdmi"]}
-//             material-color={DEFAULT_COLOR}
-//             position={[-0.371, 0.017, 0.002]}
-//             scale={0.02}
-//           />
-//         </group>
-//         <group position={[0.604, -0.261, 0.023]}>
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_34.geometry}
-//             material-color={DEFAULT_COLOR}
-//             material={materials.noise_knoppen}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_35.geometry}
-//             material={materials.grid_knop}
-//             material-color={DEFAULT_COLOR}
-//           />
-//         </group>
-//         <group position={[0, -0.378, -0.019]}>
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_37.geometry}
-//             material={materials.noise_plastic_voet}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_38.geometry}
-//             material={materials["logo.coutout.smooth"]}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_39.geometry}
-//             material={materials.metaal_voetstuk}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_41.geometry}
-//             material={materials.metaal_voetstuk}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_42.geometry}
-//             material={materials.noise_plastic_algemeen}
-//             material-color={DEFAULT_COLOR}
-//           />
-//           <mesh
-//             castShadow
-//             receiveShadow
-//             geometry={nodes.Object_44.geometry}
-//             material={materials.zwart_metaal}
-//             material-color={DEFAULT_COLOR}
-//           />
-//         </group>
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_12.geometry}
-//           material={materials["noise_knoppen.001"]}
-//           material-color={DEFAULT_COLOR}
-//           position={[0, -0.378, 0.034]}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_14.geometry}
-//           material={materials.noise_knoppen}
-//           material-color={DEFAULT_COLOR}
-//           position={[0, -0.378, 0.034]}
-//         />
-//       </group>
-//       <group position={[0.002, 0.558, 0.014]}>
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_46.geometry}
-//           material={materials["rand.ribbel"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_47.geometry}
-//           material={materials.noise_plastic_voet}
-//           material-color={DEFAULT_COLOR}
-//         />
-//       </group>
-//       <group position={[0.002, 0.21, 0.026]}>
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_49.geometry}
-//           material={materials["rand.voor.ribbel"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_50.geometry}
-//           material={materials["indictor.light"]}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_51.geometry}
-//           material={materials.noise_plastic_algemeen}
-//           material-color={DEFAULT_COLOR}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes.Object_53.geometry}
-//           material={materials.acer_logo}
-//           material-color={DEFAULT_COLOR}
-//           position={[-0.002, 0.001, 0.004]}
-//           rotation={[Math.PI / 2, 0, 0]}
-//         />
-//       </group>
+//       <mesh
+//         castShadow
+//         receiveShadow
+//         geometry={nodes.Object_5.geometry}
+//         material={materials.material}
+//         position={[0.443, 0.01, 0.279]}
+//         rotation={[0, -Math.PI / 2, 0]}
+//         scale={[0, 0.002, 0]}
+//       />
+//       <mesh
+//         castShadow
+//         receiveShadow
+//         geometry={nodes.Object_9.geometry}
+//         material={materials.material}
+//         position={[-0.417, 0.01, 0.279]}
+//         rotation={[0, -Math.PI / 2, 0]}
+//         scale={[0, 0.002, 0]}
+//       />
 //     </group>
 //   );
-// };
+// }
 
-// // Прелоадим модель (обязательно)
-// useGLTF.preload("models/acer_monitor-2.glb");
-
-// export default Computer;
+// useGLTF.preload("models/screen.glb");
