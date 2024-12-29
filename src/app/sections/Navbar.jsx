@@ -8,7 +8,23 @@ const NavItems = ({ onClick = () => {} }) => (
   <ul className="nav-ul">
     {navLinks.map((item) => (
       <li key={item.id} className="nav-li">
-        <a href={item.href} className="nav-li_a" onClick={onClick}>
+        <a
+          href={item.href}
+          className="nav-li_a"
+          onClick={(e) => {
+            e.preventDefault();
+            setTimeout(() => {
+              const element = document.querySelector(item.href);
+              if (element) {
+                window.scrollTo({
+                  top: element.offsetTop - 80,
+                  behavior: "smooth",
+                });
+              }
+              onClick();
+            }, 100);
+          }}
+        >
           {item.name}
         </a>
       </li>
@@ -30,7 +46,7 @@ const Navbar = () => {
             href="/"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
           >
-            Darya
+            Darya Petrenko
           </Link>
 
           <button

@@ -149,8 +149,14 @@ body {
 
   /*  footer */
   .social-icon {
-    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
+    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 text-zinc-100;
+    transition: all 0.3s ease;
   }
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  @apply bg-white-700;
 }
 
 .waving-hand {
