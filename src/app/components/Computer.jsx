@@ -11,7 +11,13 @@
 //   const { actions } = useAnimations(animations, group);
 
 //   const txt = useVideoTexture(
-//     props.texture ? props.texture : "/textures/project/1227.mp4"
+//     props.texture ? props.texture : "/textures/project/1227.mp4",
+//   {
+//       loop: true,
+//       muted: true,
+//       autoplay: true,
+//       crossOrigin: "Anonymous",
+//     }
 
 //   );
 
