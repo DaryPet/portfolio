@@ -61,9 +61,9 @@ const Contact = () => {
           className="absolute inset-0 min-h-screen"
         />
         <div className="contact-container">
-          {/* <h3 className="text-4xl font-bold text-center text-white mb-4 mt-4">
+          <h3 className="text-4xl font-bold text-center text-white mb-4 mt-4">
             Let's talk
-          </h3> */}
+          </h3>
           <p className="text-lg text-white-600">
             Looking to build a new website, improve your existing platform, or
             bring a unique project to life, I’m here to help.
