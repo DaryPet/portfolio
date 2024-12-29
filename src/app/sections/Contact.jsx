@@ -15,6 +15,8 @@ const Contact = () => {
     };
     handleResize();
     window.addEventListener("resize", handleResize);
+
+    // Убираем слушатель при размонтировании компонента
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -106,10 +108,18 @@ const Contact = () => {
                 required
                 rows={
                   windowWidth <= 375
-                    ? 3
+                    ? 1 // Для экранов шириной до 375px
                     : windowWidth > 375 && windowWidth <= 540
+                    ? 2 // Для экранов от 375px до 540px
+                    : windowWidth > 540 && windowWidth <= 1000
+                    ? 3 // Для экранов от 540px до 1000px
+                    : windowWidth > 1001 && windowWidth <= 1050
                     ? 4
-                    : 5
+                    : windowWidth > 1051 && windowWidth <= 1200
+                    ? 5
+                    : windowWidth > 1201 && windowWidth <= 1240
+                    ? 7
+                    : 10
                 }
                 className="field-input resize-none w-full"
                 placeholder="Hi, I'm interested in..."

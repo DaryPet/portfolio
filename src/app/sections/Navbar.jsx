@@ -69,12 +69,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Мобильное меню */}
       <div
         className={`nav-sidebar ${
-          isOpen ? "max-h-screen" : "max-h-0"
+          isOpen ? "max-h-full" : "max-h-0"
         } overflow-hidden transition-all duration-300 ease-in-out sm:hidden`}
-        style={{ maxHeight: isOpen ? "500px" : "0px" }} // Для плавной анимации
+        style={{ maxHeight: isOpen ? "500px" : "0px" }}
       >
         <nav className="p-5 text-white">
           <NavItems onClick={closeMenu} />
