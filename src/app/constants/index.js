@@ -24,36 +24,36 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: "Emily Johnson",
-    position: "Marketing Director at GreenLeaf",
-    img: "assets/review1.png",
+    name: "Lex Ivanenko",
+    position: "Diractor at Guitar School",
+    img: "assets/lex.jpg",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Working with Daria has fully automated our educational processes, kept us always connected with our students, and improved our team’s workflow. The results exceeded all expectations!",
   },
   {
     id: 2,
-    name: "Mark Rogers",
-    position: "Founder of TechGear Shop",
-    img: "assets/review2.png",
+    name: "Alexander Radion",
+    position: "Founder of Fortune Tax Solution",
+    img: "assets/tax-1.png",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+      "Working with Darya has been a game-changer for our business. Her platform completely revolutionized our production process, making it incredibly efficient and fully automated. We’re always connected with our clients, and the enhanced soft skills features have made teamwork effortless and highly productive. If you’re serious about taking your business to the next level, Darya knows exactly how to make it happen!",
   },
-  {
-    id: 3,
-    name: "John Dohsas",
-    position: "Project Manager at UrbanTech ",
-    img: "assets/review3.png",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-  },
-  {
-    id: 4,
-    name: "Ether Smith",
-    position: "CEO of BrightStar Enterprises",
-    img: "assets/review4.png",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
-  },
+  // {
+  //   id: 3,
+  //   name: "John Dohsas",
+  //   position: "Project Manager at UrbanTech ",
+  //   img: "assets/review3.png",
+  //   review:
+  //     "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Ether Smith",
+  //   position: "CEO of BrightStar Enterprises",
+  //   img: "assets/review4.png",
+  //   review:
+  //     "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
+  // },
 ];
 
 export const myProjects = [
@@ -375,32 +375,42 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: "Framer",
-    pos: "Lead Web Developer",
-    duration: "2022 - Present",
+    name: "Freelancer",
+    pos: "Software Developer",
+    duration: "2023 - Present",
     title:
-      "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: "/assets/framer.svg",
+      "Contributed to the development of complex web applications, enhancing scalability and performance. Collaborated effectively with development teams and worked as a freelancer on various projects, applying skills to deliver high-quality solutions.",
+    icon: "/assets/freelance.svg",
     animation: "victory",
   },
   {
     id: 2,
-    name: "Figma",
-    pos: "Web Developer",
-    duration: "2020 - 2022",
+    name: "Momentum & TechnoSoft",
+    pos: "QA Engineer",
+    duration: "2023 - 2024",
     title:
-      "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: "/assets/figma.svg",
-    animation: "clapping",
+      "AI Desktop and Mobile Apps, Phone Apps, Web Apps.Conducted UI, API, and regression testing, ensuring a seamless user experience and robust functionality. ed well in a mixed team of pros and newbies to hit our project goals together.",
+    icon: "/assets/qa.svg",
+    animation: "running",
   },
   {
     id: 3,
-    name: "Notion",
-    pos: "Junior Web Developer",
-    duration: "2019 - 2020",
+    name: "Brain Power Film Production",
+    pos: "Production Coordinator",
+    duration: "2022 - 2023",
     title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: "/assets/notion.svg",
-    animation: "salute",
+      "Oversaw movie production on set, managing planning, locations, and filming schedules.Thrived in high-pressure environments, adept at adapting to changes, and demonstrated a rapid learning curve.",
+    icon: "/assets/films.svg",
+    animation: "walk",
+  },
+  {
+    id: 4,
+    name: "Music School",
+    pos: "Music Teacher",
+    duration: "2002 - 2022",
+    title:
+      "Guitar, bass and ukulele lessons for children & adults. Meticulous approach to crafting individualized learning programs tailored to the specific needs and preferences of each client, emphasizing precision and client satisfaction.",
+    icon: "/assets/music.svg",
+    animation: "walk",
   },
 ];
