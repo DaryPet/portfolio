@@ -41,12 +41,19 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-red bg-white-500">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <Link
-            href="/"
-            className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
-          >
-            Darya Petrenko
+        {/* <div className="flex justify-between items-center py-5 mx-auto c-space"> */}
+        <div className="flex justify-between items-center py-5 px-4">
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/assets/mylogo-2.png" // Укажите путь к вашему логотипу
+              alt="Darya Petrenko"
+              width={40}
+              height={40}
+              className="hover:opacity-80 transition-opacity"
+            />
+            <span className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
+              Darya Petrenko
+            </span>
           </Link>
 
           <button

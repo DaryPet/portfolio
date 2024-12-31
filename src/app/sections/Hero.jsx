@@ -37,7 +37,6 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
             <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
@@ -71,7 +70,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-1 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
+        <a href="#contact" className="w-fit">
           <Button
             name="Let's work together"
             isBeam
