@@ -1,6 +1,5 @@
 "use client";
 
-import { Leva } from "leva";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
@@ -13,9 +12,16 @@ import Arrow from "../components/Arrow";
 import CanvasLoader from "../components/Loader";
 import HeroCamera from "../components/HeroCamera";
 import { calculateSizes } from "../constants/index";
-// import { HackerRoom } from "../components/HackerRoom";
-// import Office from "../components/Office";
+import dynamic from "next/dynamic";
 import OfficeA from "../components/OfficeA";
+// const OfficeA = dynamic(() => import("../components/OfficeA"), { ssr: false });
+
+// const Rings = dynamic(() => import("../components/Rings"), { ssr: false });
+// const ReactLogo = dynamic(() => import("../components/ReactLogo"), {
+//   ssr: false,
+// });
+// const Arrow = dynamic(() => import("../components/Arrow"), { ssr: false });
+// const Target = dynamic(() => import("../components/Target"), { ssr: false });
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -28,38 +34,20 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="md:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          {/* <span className="waving-hand">👋</span> Welcome to my world */}
           Welcome to my world
         </p>
-        <p className="hero_tag text-gray_gradient">
-          {/* Building Products & Brands */}
-          Your Vision, My Code.
-        </p>
+        <p className="hero_tag text-gray_gradient">Your Vision, My Code.</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
-              {/* <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
-              /> */}
-              {/* <Office
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
-              /> */}
               <OfficeA
                 scale={sizes.deskScale}
-                // scale={3}
-                // position={[3, -4, 0]}
                 position={sizes.deskPosition}
-                // rotation={[0, -1, 0]}
                 rotation={[0, -Math.PI / 2, 0]}
               />
             </HeroCamera>
@@ -78,9 +66,7 @@ const Hero = () => {
                 depthTest={false}
               />
             </group>
-            {/* <ambientLight intensity={1} /> */}
-            <ambientLight intensity={2} />
-            {/* <directionalLight position={[10, 10, 10]} intensity={0.5} /> */}
+            <ambientLight intensity={1} />
             <directionalLight position={[-10, -10, 20]} intensity={3.5} />
           </Suspense>
         </Canvas>

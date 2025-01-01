@@ -348,7 +348,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
       ? [3.5, -3, 0]
       : isTablet
       ? [4, -5, 0]
-      : [5, -5, 0],
+      : [5, -6.5, 0],
     arrowPosition: isSmall
       ? [2.7, -8, 0]
       : isMobile

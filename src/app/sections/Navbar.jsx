@@ -12,13 +12,12 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="relative top-0 left-0 right-0 z-50 border-b bg-black text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white">
       <div className="max-w-7xl mx-auto">
-        {/* <div className="flex justify-between items-center py-5 mx-auto c-space"> */}
         <div className="flex justify-between items-center py-5 px-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/assets/mylogo-2.png" // Укажите путь к вашему логотипу
+              src="/assets/mylogo-2.png"
               alt="Darya Petrenko"
               width={40}
               height={40}
