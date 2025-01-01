@@ -3,34 +3,7 @@ import { useState } from "react";
 import { navLinks } from "../constants/index";
 import Link from "next/link";
 import Image from "next/image";
-
-const NavItems = ({ onClick = () => {} }) => (
-  <ul className="nav-ul">
-    {navLinks.map((item) => (
-      <li key={item.id} className="nav-li">
-        <a
-          href={item.href}
-          className="nav-li_a"
-          onClick={(e) => {
-            e.preventDefault();
-            setTimeout(() => {
-              const element = document.querySelector(item.href);
-              if (element) {
-                window.scrollTo({
-                  top: element.offsetTop - 80,
-                  behavior: "smooth",
-                });
-              }
-              onClick();
-            }, 100);
-          }}
-        >
-          {item.name}
-        </a>
-      </li>
-    ))}
-  </ul>
-);
+import NavItems from "../components/NavItems";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +12,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-red bg-white-500">
+    <header className="relative top-0 left-0 right-0 z-50 border-b bg-black text-white">
       <div className="max-w-7xl mx-auto">
         {/* <div className="flex justify-between items-center py-5 mx-auto c-space"> */}
         <div className="flex justify-between items-center py-5 px-4">

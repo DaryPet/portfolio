@@ -13,7 +13,9 @@ import Arrow from "../components/Arrow";
 import CanvasLoader from "../components/Loader";
 import HeroCamera from "../components/HeroCamera";
 import { calculateSizes } from "../constants/index";
-import { HackerRoom } from "../components/HackerRoom";
+// import { HackerRoom } from "../components/HackerRoom";
+// import Office from "../components/Office";
+import OfficeA from "../components/OfficeA";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -30,7 +32,8 @@ const Hero = () => {
           Welcome to my world
         </p>
         <p className="hero_tag text-gray_gradient">
-          Building Products & Brands
+          {/* Building Products & Brands */}
+          Your Vision, My Code.
         </p>
       </div>
 
@@ -41,10 +44,23 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
-              <HackerRoom
+              {/* <HackerRoom
                 scale={sizes.deskScale}
                 position={sizes.deskPosition}
                 rotation={[0.1, -Math.PI, 0]}
+              /> */}
+              {/* <Office
+                scale={sizes.deskScale}
+                position={sizes.deskPosition}
+                rotation={[0.1, -Math.PI, 0]}
+              /> */}
+              <OfficeA
+                scale={sizes.deskScale}
+                // scale={3}
+                // position={[3, -4, 0]}
+                position={sizes.deskPosition}
+                // rotation={[0, -1, 0]}
+                rotation={[0, -Math.PI / 2, 0]}
               />
             </HeroCamera>
 
@@ -62,9 +78,10 @@ const Hero = () => {
                 depthTest={false}
               />
             </group>
-
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
+            {/* <ambientLight intensity={1} /> */}
+            <ambientLight intensity={2} />
+            {/* <directionalLight position={[10, 10, 10]} intensity={0.5} /> */}
+            <directionalLight position={[-10, -10, 20]} intensity={3.5} />
           </Suspense>
         </Canvas>
       </div>
