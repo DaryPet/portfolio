@@ -1,11 +1,8 @@
-
 "use client";
 import dynamic from "next/dynamic";
 import { Suspense, useState, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
-// Dynamic imports for components with SSR disabled
 const Chunk = dynamic(() => import("../components/Chunk"), { ssr: false });
 const CanvasLoader = dynamic(() => import("../components/Loader"), {
   ssr: false,
@@ -16,7 +13,6 @@ import { workExperiences } from "../constants/index";
 const Experience = () => {
   const [animationName, setAnimationName] = useState("running");
 
-  // Optimized state updater to avoid unnecessary re-renders
   const handleAnimation = useCallback((name) => {
     setAnimationName(name.toLowerCase());
   }, []);
@@ -24,18 +20,16 @@ const Experience = () => {
   return (
     <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
-        <p className="head-text">My Work Experience</p>
+        <h2 className="head-text">My Work Experience</h2>
 
         <div className="work-container">
-          {/* Canvas for 3D rendering */}
           <div className="work-canvas">
             <Canvas
               shadows
-              dpr={[1, 1.5]} // Optimized device pixel ratio
-              gl={{ antialias: false }} // Disabled antialiasing for better performance
-              camera={{ position: [0, 0, 5], fov: 75 }} // Camera configuration
+              dpr={[1, 1.5]}
+              gl={{ antialias: false }}
+              camera={{ position: [0, 0, 5], fov: 75 }}
             >
-              {/* Lighting setup */}
               <ambientLight intensity={0.5} />
               <spotLight
                 position={[8, 8, 10]}
@@ -45,8 +39,6 @@ const Experience = () => {
               />
               <directionalLight position={[10, 10, 10]} intensity={0.5} />
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
-              {/* Suspense for loading 3D model */}
               <Suspense fallback={<CanvasLoader />}>
                 <Chunk
                   position-y={-2.5}
@@ -57,7 +49,6 @@ const Experience = () => {
             </Canvas>
           </div>
 
-          {/* Work content */}
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map((item, index) => (
@@ -74,7 +65,7 @@ const Experience = () => {
                         className="w-full h-full"
                         src={item.icon}
                         alt={item.name}
-                        loading="lazy" // Lazy loading for images
+                        loading="lazy"
                       />
                     </div>
                     <div className="work-content_bar" />

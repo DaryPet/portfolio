@@ -34,7 +34,7 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             <Image
-              src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"} // Убедитесь, что пути правильные
+              src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
               alt="toggle"
               className="w-6 h-6"
               width={25}

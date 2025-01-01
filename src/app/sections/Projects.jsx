@@ -144,7 +144,6 @@ import gsap from "gsap";
 import { myProjects } from "../constants/index.js";
 import CanvasLoader from "../components/Loader";
 
-// Dynamic import for Computer component
 const Computer = dynamic(() => import("../components/Computer"), {
   ssr: false,
 });
@@ -177,22 +176,19 @@ const Projects = () => {
 
   return (
     <section className="c-space my-20" id="work">
-      <p className="head-text">Projects I worked on</p>
+      <h2 className="head-text">Projects I worked on</h2>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        {/* Project Details Section */}
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-          {/* Spotlight Image */}
           <div className="absolute top-0 right-0">
             <img
               src={currentProject.spotlight}
               alt="spotlight"
               className="w-full h-96 object-cover rounded-xl"
-              loading="lazy" // Lazy loading for images
+              loading="lazy"
             />
           </div>
 
-          {/* Logo */}
           <div
             className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
             style={currentProject.logoStyle}
@@ -201,11 +197,9 @@ const Projects = () => {
               className="w-10 h-10 shadow-sm"
               src={currentProject.logo}
               alt="logo"
-              loading="lazy" // Lazy loading for images
+              loading="lazy"
             />
           </div>
-
-          {/* Project Text Details */}
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-white text-2xl font-semibold animatedText">
               {currentProject.title}
@@ -214,8 +208,6 @@ const Projects = () => {
             <p className="animatedText">{currentProject.subdesc}</p>
             <p className="animatedText">{currentProject.stack}</p>
           </div>
-
-          {/* Tags and Link */}
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
@@ -235,8 +227,6 @@ const Projects = () => {
               <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
             </a>
           </div>
-
-          {/* Navigation Buttons */}
           <div className="flex justify-between items-center mt-7">
             <button
               className="arrow-btn"
@@ -256,13 +246,11 @@ const Projects = () => {
             </button>
           </div>
         </div>
-
-        {/* 3D Model Section */}
         <div className="border border-black-300 bg-black rounded-lg h-96 md:h-full">
           <Canvas
             shadows
-            dpr={[1, 1.5]} // Optimized resolution
-            gl={{ antialias: false }} // Disable antialiasing for performance
+            dpr={[1, 1.5]}
+            gl={{ antialias: false }}
             camera={{ position: [0, 0, 5], fov: 75 }}
           >
             <ambientLight intensity={0.5} />
