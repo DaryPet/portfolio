@@ -14,14 +14,6 @@ import HeroCamera from "../components/HeroCamera";
 import { calculateSizes } from "../constants/index";
 import dynamic from "next/dynamic";
 import OfficeA from "../components/OfficeA";
-// const OfficeA = dynamic(() => import("../components/OfficeA"), { ssr: false });
-
-// const Rings = dynamic(() => import("../components/Rings"), { ssr: false });
-// const ReactLogo = dynamic(() => import("../components/ReactLogo"), {
-//   ssr: false,
-// });
-// const Arrow = dynamic(() => import("../components/Arrow"), { ssr: false });
-// const Target = dynamic(() => import("../components/Target"), { ssr: false });
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -33,9 +25,9 @@ const Hero = () => {
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="md:text-3xl text-xl font-medium text-white text-center font-generalsans">
+        <h2 className="md:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Welcome to my world
-        </p>
+        </h2>
         <p className="hero_tag text-gray_gradient">Your Vision, My Code.</p>
       </div>
 
