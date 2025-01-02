@@ -1,22 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//       },
-//     },
-//   },
-//   plugins: [],
-// };
-
-/** @type {import('tailwindcss').Config} */
+// @type {import('tailwindcss').Config}
 const tailwindConfig = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -45,13 +27,13 @@ const tailwindConfig = {
         terminal: "url('/assets/terminal.png')",
       },
       animation: {
-        typing: "typing 2.5s steps(20, end), blink 0.75s step-end infinite",
+        typing: "typing 3s steps(20, end)",
         fadeIn: "fadeIn 1s ease-in-out",
       },
       keyframes: {
         typing: {
           "0%": { width: "0" },
-          "100%": { width: "20ch" },
+          "100%": { width: "16ch" },
         },
         blink: {
           "50%": { borderColor: "transparent" },
