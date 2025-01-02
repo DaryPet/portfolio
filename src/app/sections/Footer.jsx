@@ -6,12 +6,9 @@ const Footer = () => {
   return (
     <footer className="c-space pt-8 pb-10 border-t bg-black text-white w-full">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center flex-wrap gap-5">
-        {/* Навигационные ссылки */}
         <div className="w-full sm:w-auto">
           <NavItems />
         </div>
-
-        {/* Политика и условия */}
         <div className="text-gray-500 flex gap-2">
           <Link
             href="/terms"
@@ -31,8 +28,6 @@ const Footer = () => {
             Privacy Policy
           </Link>
         </div>
-
-        {/* Социальные иконки */}
         <div className="flex gap-3">
           <div className="social-icon">
             <a
@@ -71,8 +66,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
-        {/* Авторские права */}
         <p className="text-gray-500">
           © 2024 Darya Petrenko. All rights reserved.
         </p>

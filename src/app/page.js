@@ -1,29 +1,3 @@
-// "use client";
-
-// import Navbar from "./sections/Navbar";
-// import Hero from "./sections/Hero";
-// import About from "./sections/About";
-// import Projects from "./sections/Projects";
-// import Testimonials from "./sections/Testimonials";
-// import Contact from "./sections/Contact";
-// import Footer from "./sections/Footer";
-// import Experience from "./sections/Experience";
-
-// export default function Home() {
-//   return (
-//     <main className="max-w-7xl mx-auto relative">
-//       <Navbar />
-//       <Hero />
-//       <About />
-//       <Projects />
-//       <Testimonials />
-//       <Experience />
-//       <Contact />
-//       <Footer />
-//     </main>
-//   );
-// }
-
 "use client";
 import { Suspense, lazy } from "react";
 

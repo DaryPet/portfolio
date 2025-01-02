@@ -48,7 +48,6 @@ const Contact = () => {
         autoClose: 2000,
       });
       setForm({ name: "", email: "", message: "" });
-      // formRef.current.reset();
     } catch (error) {
       setLoading(false);
       toast.error("Failed to send your message. Please try again.", {
@@ -62,11 +61,11 @@ const Contact = () => {
     <section className=" c-space my-20" id="contact">
       <ToastContainer />
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img
+        {/* <img
           src="/assets/terminal.png"
           alt="terminal"
           className="absolute inset-0 min-h-screen"
-        />
+        /> */}
         <div className="contact-container">
           <h3 className="text-4xl font-bold text-center text-white-600 mb-4 mt-4">
             Let's talk
