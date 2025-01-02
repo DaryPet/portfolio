@@ -13,7 +13,12 @@ import CanvasLoader from "../components/Loader";
 import HeroCamera from "../components/HeroCamera";
 import { calculateSizes } from "../constants/index";
 import dynamic from "next/dynamic";
-import OfficeA from "../components/OfficeA";
+import Typed from "react-typed";
+// import OfficeA from "../components/OfficeA";
+const OfficeA = dynamic(() => import("../components/OfficeA"), {
+  ssr: false,
+  loading: () => <CanvasLoader />,
+});
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -25,10 +30,12 @@ const Hero = () => {
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <h2 className="md:text-3xl text-xl font-medium text-white text-center font-generalsans">
+        <h2 className="md:text-3xl text-xl font-medium text-white text-center font-generalsans animate-fadeIn">
           Welcome to my world
         </h2>
-        <p className="hero_tag text-gray_gradient">Your Vision, My Code.</p>
+        <p className="hero_tag text-gray_gradient animate-typing">
+          Your Vision - My Code.
+        </p>
       </div>
 
       <div className="w-full h-full absolute inset-0">

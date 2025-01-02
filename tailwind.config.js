@@ -44,6 +44,23 @@ const tailwindConfig = {
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
       },
+      animation: {
+        typing: "typing 2.5s steps(20, end), blink 0.75s step-end infinite",
+        fadeIn: "fadeIn 1s ease-in-out",
+      },
+      keyframes: {
+        typing: {
+          "0%": { width: "0" },
+          "100%": { width: "20ch" },
+        },
+        blink: {
+          "50%": { borderColor: "transparent" },
+        },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

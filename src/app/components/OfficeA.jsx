@@ -47,22 +47,22 @@ export default function OfficeA(props) {
           position={[-0.441, 0.037, 0.073]}
           rotation={[-0.032, 0.035, 0]}
         />
-        <mesh
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_36.geometry}
           material={materials.M_Office_PinBoard_Photo_Notepad_1024}
           position={[-0.117, 0.031, -0.374]}
           rotation={[-0.047, -0.054, 0.003]}
-        />
-        <mesh
+        /> */}
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_38.geometry}
           material={materials.M_Office_PinBoard_Photo_Notepad_1024}
           position={[0.443, 0.03, 0.199]}
           rotation={[-0.068, 0.063, 0.004]}
-        />
+        /> */}
         <mesh
           castShadow
           receiveShadow
@@ -116,24 +116,24 @@ export default function OfficeA(props) {
           />
         </group>
 
-        <mesh
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_83.geometry}
           material={materials.M_Vent_1024}
           position={[-0.01, 0, 0]}
-        />
+        /> */}
       </group>
       <group
         position={[0.996, 0.565, 0.619]}
         rotation={[-3.126, -1.002, -1.576]}
       >
-        <mesh
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_101.geometry}
           material={materials.M_Clipboard_Notepad_1024}
-        />
+        /> */}
         <mesh
           castShadow
           receiveShadow
@@ -250,14 +250,14 @@ export default function OfficeA(props) {
         material={materials.M_Table_2048}
         position={[0.213, 0.006, 1.171]}
       />
-      <mesh
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.Object_73.geometry}
         material={materials.M_TapeRecorder_Tape_Rotors_Glass_1024}
         position={[0.445, 0.743, 1.958]}
         rotation={[0, 0.361, 0]}
-      />
+      /> */}
       <mesh
         castShadow
         receiveShadow
@@ -267,14 +267,14 @@ export default function OfficeA(props) {
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
         scale={[0.619, 0.309, 0.619]}
       />
-      <mesh
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.Object_105.geometry}
         material={materials.M_Clipboard_Notepad_1024}
         position={[0.235, 0.743, 1.171]}
         rotation={[0, 0.319, Math.PI / 2]}
-      />
+      /> */}
       <mesh
         castShadow
         receiveShadow
