@@ -25,6 +25,7 @@
     "react-icons": "^5.4.0",
     "react-responsive": "^10.0.0",
     "react-toastify": "^11.0.2",
+    "react-typed": "^2.0.12",
     "tailwind": "^4.0.0",
     "three": "^0.171.0"
   },
