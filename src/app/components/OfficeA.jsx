@@ -31,14 +31,14 @@ export default function OfficeA(props) {
           geometry={nodes.Object_30.geometry}
           material={materials.M_Office_PinBoard_Photo_Notepad_1024}
         />
-        <mesh
+        {/* <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_32.geometry}
           material={materials.M_Office_PinBoard_Photo_Notepad_1024}
           position={[0.433, 0.031, -0.442]}
           rotation={[-0.02, -0.022, 0]}
-        />
+        /> */}
         <mesh
           castShadow
           receiveShadow
@@ -74,7 +74,7 @@ export default function OfficeA(props) {
         />
       </group>
       <group position={[-0.22, 2.009, 2.101]}>
-        <group position={[0.048, -0.008, 0]}>
+        {/* <group position={[0.048, -0.008, 0]}>
           <mesh
             castShadow
             receiveShadow
@@ -82,8 +82,8 @@ export default function OfficeA(props) {
             material={materials.M_Vent_1024}
             rotation={[Math.PI / 3, 0, 0]}
           />
-        </group>
-        <group position={[0.133, 0.004, 0]}>
+        </group> */}
+        {/* <group position={[0.133, 0.004, 0]}>
           <mesh
             castShadow
             receiveShadow
@@ -98,7 +98,7 @@ export default function OfficeA(props) {
             material={materials.M_Vent_1024}
             position={[0, -0.114, 0]}
           />
-        </group>
+        </group> */}
       </group>
       <group
         position={[0.996, 0.565, 0.619]}
@@ -114,7 +114,7 @@ export default function OfficeA(props) {
           scale={0.381}
         />
       </group>
-      <group position={[-0.039, 0.743, 1.563]} rotation={[0, 0.454, 0]}>
+      {/* <group position={[-0.039, 0.743, 1.563]} rotation={[0, 0.454, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -138,11 +138,11 @@ export default function OfficeA(props) {
                   material={materials["M_Lamps_CCTV_2048.001"]}
                   position={[0, 0.083, 0]}
                 />
-              </group>
-            </group>
-          </group>
-        </group>
-      </group>
+              </group> */}
+      {/* </group>
+          </group> */}
+      {/* </group> */}
+      {/* </group> */}
       <mesh
         castShadow
         receiveShadow

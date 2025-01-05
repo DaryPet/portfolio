@@ -1,9 +1,29 @@
-@import url("https://fonts.cdnfonts.com/css/general-sans");
-@import url("https://fonts.cdnfonts.com/css/general-sans");
+/* @import url("https://fonts.cdnfonts.com/css/general-sans");
+@import url("https://fonts.cdnfonts.com/css/general-sans"); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* BR Segma - Regular */
+@font-face {
+  font-family: "BR Segma";
+  src: url("/fonts/BRSegma-Regular.woff2") format("woff2"),
+    url("/fonts/BRSegma-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BR Segma - Bold */
+@font-face {
+  font-family: "BR Segma";
+  src: url("/fonts/BRSegma-Bold.woff2") format("woff2"),
+    url("/fonts/BRSegma-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   scroll-behavior: smooth;
@@ -12,7 +32,7 @@
 body {
   background: #010103;
   /* background: #fefdfa; */
-  font-family: "General Sans", sans-serif;
+  font-family: "BR Segma", sans-serif;
 }
 
 @layer utilities {
