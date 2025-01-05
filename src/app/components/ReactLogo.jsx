@@ -1,8 +1,6 @@
 "use client";
 
 import { Float, useGLTF } from "@react-three/drei";
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
 
 const ReactLogo = (props) => {
   const { nodes, materials } = useGLTF("models/react.glb");

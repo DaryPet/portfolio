@@ -38,22 +38,6 @@ export const clientReviews = [
     review:
       "Working with Darya has been a game-changer for our business. Her platform completely revolutionized our production process, making it incredibly efficient and fully automated. We’re always connected with our clients, and the enhanced soft skills features have made teamwork effortless and highly productive. If you’re serious about taking your business to the next level, Darya knows exactly how to make it happen!",
   },
-  // {
-  //   id: 3,
-  //   name: "John Dohsas",
-  //   position: "Project Manager at UrbanTech ",
-  //   img: "assets/review3.png",
-  //   review:
-  //     "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Ether Smith",
-  //   position: "CEO of BrightStar Enterprises",
-  //   img: "assets/review4.png",
-  //   review:
-  //     "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
-  // },
 ];
 
 export const myProjects = [
@@ -89,11 +73,6 @@ export const myProjects = [
         name: "TypeScript",
         path: "/assets/typescript.png",
       },
-      // {
-      //   id: 4,
-      //   name: "CSS",
-      //   path: "/assets/css.svg",
-      // },
       {
         id: 4,
         name: "Nest.js",
@@ -339,8 +318,6 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
-    // deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-    // deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
     deskScale: isSmall ? 2 : isMobile ? 2.5 : isTablet ? 3 : 4,
     deskPosition: isSmall
       ? [2.5, -3, 0]

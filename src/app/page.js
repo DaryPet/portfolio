@@ -1,8 +1,10 @@
 "use client";
 import { Suspense, lazy } from "react";
 
-const Navbar = lazy(() => import("./sections/Navbar"));
-const Hero = lazy(() => import("./sections/Hero"));
+// const Navbar = lazy(() => import("./sections/Navbar"));
+// const Hero = lazy(() => import("./sections/Hero"));
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Testimonials = lazy(() => import("./sections/Testimonials"));
